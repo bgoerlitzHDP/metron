@@ -71,6 +71,12 @@
         <display-name>Metron pid dir</display-name>
     </property>
     <property>
+        <name>kafka_security_protocol</name>
+        <description>Security protocol used for writing to and reading from Kafka</description>
+        <value>{{kafka_security_inter_broker_protocol}}</value>
+        <display-name>Kafka Security Protocol</display-name>
+    </property>
+    <property>
         <name>metron_topic_retention</name>
         <description>Kafka Retention in GB</description>
         <value>10</value>

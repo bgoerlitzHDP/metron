@@ -235,7 +235,8 @@ metron_config_zeppelin_path = format("{metron_config_path}/zeppelin")
 zeppelin_shiro_ini_content = status_params.zeppelin_shiro_ini_content
 
 # kafka_security
-kafka_security_protocol = config['configurations']['kafka-broker'].get('security.inter.broker.protocol', 'PLAINTEXT')
+kafka_security_inter_broker_protocol = config['configurations']['kafka-broker'].get('security.inter.broker.protocol', 'PLAINTEXT')
+kafka_security_protocol = format(format(config['configurations']['metron-env']['kafka_security_protocol']))
 
 kafka_user = config['configurations']['kafka-env']['kafka_user']
 storm_user = config['configurations']['storm-env']['storm_user']
